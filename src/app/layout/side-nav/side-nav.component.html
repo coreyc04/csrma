@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-side-nav sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/dashboard">
+                            <mat-icon>dashboard</mat-icon> Dashboard <span class="sr-only"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/fuel-pumps">
+                            <mat-icon>local_gas_station</mat-icon> Fuel Pumps
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/coffee">
+                            <mat-icon>local_cafe</mat-icon> Coffee
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/parking">
+                            <mat-icon>local_parking</mat-icon> Parking
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/employees">
+                            <mat-icon>people</mat-icon> Employees
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link text-muted">
+                            <mat-icon>assessment</mat-icon> Reports
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+#heading-coffee {
+    background: url(../../../../assets/images/header-coffee.jpg) repeat center fixed;
+    background-size: auto;
+}
+#heading-coffee > h1 {
+  padding-top: 16px;
+  padding-left: 8px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: #9a9a9a 2px 2px;
+}

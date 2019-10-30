@@ -1,36 +1,33 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-
-//import { AppHeaderModule } from './app-header/app-header.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LayoutsModule } from './layout/layouts.module';
+import { DashboardModule } from './module/dashboard/dashboard.module';
+import { MockDataService } from './data/service/mock/mock-data.service';
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatMenuModule,
-  //  AppHeaderModule,
-    AppRoutingModule
-  ],
-  providers: [
-    Title
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        HttpClientInMemoryWebApiModule.forRoot(MockDataService),
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        LayoutsModule,
+        DashboardModule
+    ],
+    providers: [
+        Title
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

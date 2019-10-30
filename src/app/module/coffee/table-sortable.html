@@ -1,0 +1,23 @@
+<br>
+<h1 class="display-4">Coffee Orders</h1>
+<br>
+<table class="table table-hover border rounded">
+  <thead class="thead-light-blue">
+  <tr>
+    <th scope="col">Transaction</th>
+    <th scope="col" sortable="coffee" (sort)="onSort($event)">Coffee</th>
+    <th scope="col" sortable="price" (sort)="onSort($event)">Price</th>
+    <th scope="col" sortable="difficulty" (sort)="onSort($event)">Difficulty</th>
+    <th scope="col" sortable="customer" (sort)="onSort($event)">Customer</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let coffeeOrder of coffeeOrders">
+    <th scope="row">{{ coffeeOrder.id }}</th>
+    <td>{{ coffeeOrder.coffeeName }}</td>
+    <td>${{ coffeeOrder.price | number }}</td>
+    <td>{{ coffeeOrder.processDifficulty | number }}</td>
+    <td>{{ coffeeOrder.customer }}</td>
+  </tr>
+  </tbody>
+</table>
