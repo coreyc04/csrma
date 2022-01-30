@@ -40,7 +40,7 @@ class NgbdSortableHeader {
     `]
 })
 class NgbdTableSortable {
-    @Input() coffeeOrders: CoffeeOrder[];
+    @Input() coffeeOrders: CoffeeOrder[] = [];
     coffeeOrdersSorty: CoffeeOrder[] = this.coffeeOrders;
 
     @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
