@@ -18,7 +18,7 @@ export interface SortEvent {
         '(click)': 'rotate()'
     }
 })
-export class NgbdSortableHeader {
+class NgbdSortableHeader {
 
     @Input() sortable: string;
     @Input() direction: SortDirection = '';
@@ -39,7 +39,7 @@ export class NgbdSortableHeader {
         }
     `]
 })
-export class NgbdTableSortable {
+class NgbdTableSortable {
     @Input() coffeeOrders: CoffeeOrder[];
     coffeeOrdersSorty: CoffeeOrder[] = this.coffeeOrders;
 
@@ -64,5 +64,6 @@ export class NgbdTableSortable {
             });
         }
     }
-
 }
+
+export {NgbdSortableHeader, NgbdTableSortable}

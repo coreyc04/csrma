@@ -6,6 +6,7 @@ import { CoffeeRoutingModule } from './coffee-routing.module';
 import { CoffeeListComponent } from './coffee-list/coffee-list.component';
 import { OrderComponent } from './order/order.component';
 import { NgbdTableSortable } from './table-sortable';
+import { NgbdSortableHeader } from './table-sortable';
 
 @NgModule({
     declarations: [CoffeeListComponent, OrderComponent, NgbdTableSortable],

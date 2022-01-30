@@ -9,19 +9,19 @@ const routes: Routes = [
     },
     {
         path: 'fuel-pumps',
-        loadChildren: './module/fuel-pumps/fuel-pumps.module#FuelPumpsModule'
+        loadChildren: () => import('./module/fuel-pumps/fuel-pumps.module').then(m => m.FuelPumpsModule)
     },
     {
         path: 'coffee',
-        loadChildren: './module/coffee/coffee.module#CoffeeModule'
+        loadChildren: () => import('./module/coffee/coffee.module').then(m => m.CoffeeModule)
     },
     {
         path: 'parking',
-        loadChildren: './module/parking/parking.module#ParkingModule'
+        loadChildren: () => import('./module/parking/parking.module').then(m => m.ParkingModule)
     },
     {
         path: 'employees',
-        loadChildren: './module/employees/employees.module#EmployeesModule'
+        loadChildren: () => import('./module/employees/employees.module').then(m => m.EmployeesModule)
     },
     {
         path: '',
