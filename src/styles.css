@@ -6,6 +6,11 @@ body {
     font-size: .875rem; font-family: Roboto, Arial, sans-serif;
 }
 
+ul > a:hover,
+ul > a:active {
+    text-decoration: none;
+}
+
 .feather {
   width: 16px;
   height: 16px;
