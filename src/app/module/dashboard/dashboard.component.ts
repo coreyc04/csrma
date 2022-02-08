@@ -8,6 +8,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class DashboardComponent {
     contentHeader: string = "Dashboard";
+    dateToday: Date = new Date();
+
     constructor(private ngTitle: Title) {
         this.ngTitle.setTitle("CSRMA - " + this.contentHeader);
     }
