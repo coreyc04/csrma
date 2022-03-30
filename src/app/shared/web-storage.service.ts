@@ -17,8 +17,6 @@ export class CsrmaWebStorageService {
     getRemote() {
         const _id: string = "001";
         return _id;
-        //        return [{ "_id": "001", "_rev": "1.0", "rev": "1", "filter": "coffee cups"}];
-        //        return this.http.get('http://localhost:5984/coffee');
     }
 
     putRemote(payload: Object) {

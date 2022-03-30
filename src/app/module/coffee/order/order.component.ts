@@ -12,11 +12,8 @@ export class OrderComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) { 
   }
 
-  ngOnInit() {
-    // this.route.params.subscribe(count => this.orderQuantity = count.params);
-    // this.orderQuantity = this.route.snapshot.params.get('count');
-    // console.log("Order Quantity is " + this.orderQuantity);
-    this.route.paramMap.subscribe(paramMap => {
+    ngOnInit() {
+        this.route.paramMap.subscribe(paramMap => {
         this.orderQuantity = Number(paramMap.get('count'));
     });
 
