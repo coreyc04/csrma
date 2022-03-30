@@ -11,15 +11,6 @@ export class CoffeeOrder {
     customerSatisfaction: number;
 }
 
-// class Coffee {
-//     constructor(
-//         public id: number,
-//         public name: string,
-//         public strength: string,
-//         public countryOfOrigin?: string
-//     ) { }
-// }
-
 @Injectable({
     providedIn: 'root'
 })
