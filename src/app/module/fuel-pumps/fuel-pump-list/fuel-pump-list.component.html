@@ -6,80 +6,11 @@
 </div>
 
 <div class="card-deck">
-    <div class="card">
-        <div class="card-body bg-warning">
-            <h4 class="card-title"><strong>1</strong></h4>
-            <h5 class="card-text">In Use</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <a href="fuel-pumps" class="list-group-item">Speak To Pump</a>
-            <a href="fuel-pumps" class="list-group-item">Cancel Transaction</a>
-            <a href="fuel-pumps" class="list-group-item">View Real-Time Data</a>
-        </ul>
+    <div class="card" *ngFor="let pump of fuelPumps">
+        <!-- <div class="card-body" [ngClass]="pump.operationalStatus"> -->
         <div class="card-body">
-            <a href="#" class="card-link">Fuel Supplier Direct Chat</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body bg-success">
-            <h4 class="card-title"><strong>2</strong></h4>
-            <h5 class="card-text">Available</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <a href="fuel-pumps" class="list-group-item">Speak To Pump</a>
-            <a href="fuel-pumps" class="list-group-item">Cancel Transaction</a>
-            <a href="fuel-pumps" class="list-group-item">View Real-Time Data</a>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Fuel Supplier Direct Chat</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body bg-danger">
-            <h4 class="card-title"><strong>3</strong></h4>
-            <h5 class="card-text">Unavailable</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <a href="fuel-pumps" class="list-group-item">Speak To Pump</a>
-            <a href="fuel-pumps" class="list-group-item">Cancel Transaction</a>
-            <a href="fuel-pumps" class="list-group-item">View Real-Time Data</a>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Fuel Supplier Direct Chat</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body bg-success">
-            <h4 class="card-title"><strong>4</strong></h4>
-            <h5 class="card-text">Available</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <a href="fuel-pumps" class="list-group-item">Speak To Pump</a>
-            <a href="fuel-pumps" class="list-group-item">Cancel Transaction</a>
-            <a href="fuel-pumps" class="list-group-item">View Real-Time Data</a>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Fuel Supplier Direct Chat</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body bg-success">
-            <h4 class="card-title"><strong>5</strong></h4>
-            <h5 class="card-text">Available</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <a href="fuel-pumps" class="list-group-item">Speak To Pump</a>
-            <a href="fuel-pumps" class="list-group-item">Cancel Transaction</a>
-            <a href="fuel-pumps" class="list-group-item">View Real-Time Data</a>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Fuel Supplier Direct Chat</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body bg-danger">
-            <h4 class="card-title"><strong>6</strong></h4>
-            <h5 class="card-text">Unavailable</h5>
+            <h4 class="card-title"><strong>{{pump.name}}</strong></h4>
+            <h5 class="card-text">{{pump.operationalStatus}}</h5>
         </div>
         <ul class="list-group list-group-flush">
             <a href="fuel-pumps" class="list-group-item">Speak To Pump</a>

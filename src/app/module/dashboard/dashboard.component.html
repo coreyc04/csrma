@@ -1,10 +1,15 @@
 <div class="d-flex flex-column align-items-center pb-2 mb-3 border-bottom">
-    <p>Currently: {{dateToday | date:'MM/dd/yyyy  @HH:mm'}}</p>
+    <p>Currently: {{dateTimeNow | date:'MM/dd/yyyy  @HH:mm'}}</p>
     <h3 class="h3">{{contentHeader}}</h3>
 </div>
 <div class="container-sm">
     <div class="row text-center">
         <div class="col-sm">
+            <!--
+            TODO:
+            Render chart views of applicable data.
+            Run it asynchronously in the component; do not block.
+            -->
             <h3><u>Data View #1</u></h3>
         </div>
         <div class="col-sm">

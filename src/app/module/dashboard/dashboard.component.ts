@@ -8,9 +8,15 @@ import { Title } from '@angular/platform-browser';
 })
 export class DashboardComponent {
     contentHeader: string = "Dashboard";
-    dateToday: Date = new Date();
+    dateTimeNow: Date = new Date();
 
     constructor(private ngTitle: Title) {
         this.ngTitle.setTitle("CSRMA - " + this.contentHeader);
     }
+
+    // TODO:
+    // Allow dateNow to dynamically update time/clock per second for valid time/clock in the view.
+    // Format would be HH:mm:ss
+
+
 }

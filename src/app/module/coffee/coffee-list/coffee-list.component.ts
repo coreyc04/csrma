@@ -11,7 +11,7 @@ export class CoffeeListComponent implements OnInit {
     contentHeader: string = "Coffee";
     coffeeOrders: CoffeeOrder[];
 
-    constructor(private ngTitle: Title, private coffeeOrderService: CoffeeOrderService) { 
+    constructor(private ngTitle: Title, private coffeeOrderService: CoffeeOrderService) {
     }
 
     ngOnInit() {
@@ -22,11 +22,10 @@ export class CoffeeListComponent implements OnInit {
     getCoffeeOrders(): void {
         this.coffeeOrderService.getCoffeeOrders()
             .subscribe(coffeeOrders => this.coffeeOrders = coffeeOrders);
-            console.log(this.coffeeOrders);
+            this.logCoffeeOrders
     }
 
-    // manual check for data load state
-    pushInfo(): void {
+    logCoffeeOrders(): void {
         console.log(this.coffeeOrders);
     }
 
